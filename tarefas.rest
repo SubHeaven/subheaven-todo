@@ -1,0 +1,57 @@
+POST http://127.0.0.1:33321/db/tarefa HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Tarefa Um",
+    "descricao": "Testar a inserção da tarefa um."
+}
+
+###
+
+POST http://127.0.0.1:33321/db/tarefa HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Tarefa Dois",
+    "descricao": "Testar a inserção da tarefa dois.",
+    "concluido": true
+}
+
+###
+
+POST http://127.0.0.1:33321/db/tarefa HTTP/1.1
+content-type: application/json
+
+{
+    "nome": "Tarefa Três",
+    "descricao": "Testar a inserção da tarefa três."
+}
+
+###
+
+PUT http://127.0.0.1:33321/db/tarefa HTTP/1.127
+content-type: application/json
+
+{
+    "id": 3,
+    "nome": "Tarefa Três Alterada"
+}
+
+###
+
+PUT http://127.0.0.1:33321/db/tarefa HTTP/1.127
+content-type: application/json
+
+{
+    "id": 3,
+    "concluido": true
+}
+
+###
+
+DELETE http://127.0.0.1:33321/db/tarefa HTTP/1.127
+content-type: application/json
+
+{
+    "id": 2
+}

@@ -1,0 +1,21 @@
+{
+    description: 'Tabela de cadastro das tarefas',
+    model: 'tarefa',
+    fields: {
+        id: {
+            primary: true
+        },
+        nome: {
+            type: 'string',
+            required: true
+        },
+        descricao: {
+            type: 'text',
+            required: true
+        },
+        concluido: {
+            type: 'boolean',
+            default: false
+        }
+    }
+}
