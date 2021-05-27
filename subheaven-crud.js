@@ -153,8 +153,10 @@ exports.setSchemas = async app => {
 }
 
 exports.init = async(url, app) => {
+    log(`Iniciando controlador de CRUD`);
     await db.init();
     this.url = url;
     this.schemas = db.schemas;
     await this.setSchemas(app);
+    log(`Controlador de CRUD carregado com sucesso.`);
 }
