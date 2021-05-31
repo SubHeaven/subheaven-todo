@@ -1,7 +1,3 @@
-console.log("Olá todo");
-
-console.log('passo 1');
-/* <!-- */
 const options = {
 
     moduleCache: {
@@ -28,7 +24,7 @@ const { loadModule, version } = window["vue3-sfc-loader"];
 
 const app = Vue.createApp({
     components: {
-        'my-component': Vue.defineAsyncComponent(() => loadModule('./myComponent.vue', options)),
+        'my-component': Vue.defineAsyncComponent(() => loadModule('../vue/teste.vue', options)),
     },
     template: `Hello <my-component></my-component> <sub>from vue3-sfc-loader v${ version }</sub>`
 });

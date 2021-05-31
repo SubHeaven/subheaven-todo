@@ -11,11 +11,18 @@ const usersRouter = require('./routes/users');
 const app = express();
 
 app.use(helmet());
+app.use(function(req, res, next) {
+    res.setHeader(
+        'Content-Security-Policy',
+        "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; frame-src 'self'"
+    );
+    next();
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.png')));
-// app.use(express.static(path.join(__dirname, 'public')));
+//app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'front')));
 
 app.use('/', indexRouter);
