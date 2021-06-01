@@ -5,6 +5,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const subheaven_crud = require('./subheaven-crud');
 
+const env = require('subheaven-env');
+env.addParams([
+    { name: 'PORT', description: 'Porta onde o sistema irá rodar.', required: true, sample: '33321' }
+]);
+env.config();
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 

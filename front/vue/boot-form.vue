@@ -1,6 +1,10 @@
 <template>
     <form>
         <slot></slot>
+        <div class="d-grid gap-3 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary col-2" type="button">Cancelar</button>
+            <button class="btn btn-primary col-2" type="button">Gravar</button>
+        </div>
     </form>
 </template>
 
