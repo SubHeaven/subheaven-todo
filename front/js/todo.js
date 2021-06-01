@@ -24,9 +24,10 @@ const { loadModule, version } = window["vue3-sfc-loader"];
 
 const app = Vue.createApp({
     components: {
-        'my-component': Vue.defineAsyncComponent(() => loadModule('../vue/teste.vue', options)),
+        'main-page': Vue.defineAsyncComponent(() => loadModule('../vue/page-todo.vue', options)),
     },
-    template: `Hello <my-component></my-component> <sub>from vue3-sfc-loader v${ version }</sub>`
+    //template: `Hello <my-component></my-component> <sub>from vue3-sfc-loader v${ version }</sub>`
+    template: `<main-page></main-page>`
 });
 
 app.mount('#app');

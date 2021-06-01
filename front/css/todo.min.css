@@ -1,1 +1,1 @@
-body{background-color:#00B7FF}
+@font-face{font-family:'Indie Flower';font-style:normal;font-weight:400;font-display:swap;src:url("fonts/IndieFlower-Regular.ttf") format("ttf"),url("fonts/IndieFlower-Regular.ttf") format("ttf")}body{font-family:'Indie Flower', cursive}
