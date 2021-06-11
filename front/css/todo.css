@@ -1,11 +1,51 @@
-@font-face {
-  font-family: 'Indie Flower';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("fonts/IndieFlower-Regular.ttf") format("ttf"), url("fonts/IndieFlower-Regular.ttf") format("ttf");
+@import url("https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap");
+body {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 1rem;
 }
 
-body {
-  font-family: 'Indie Flower', cursive;
+/************************************************************************************************
+ ***********************************************************************************************/
+.sub-form {
+  background-color: rgba(230, 230, 230, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.sub-form-btn-panel {
+  background-color: rgba(230, 230, 230, 0);
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.sub-form-btn {
+  color: #666;
+  border: 2px solid #6B6B67;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  font-size: 1.2rem;
+}
+
+.btn-cancel {
+  background-color: #fdd;
+}
+
+.btn-confirm {
+  background-color: #dfd;
+}
+
+.sub-form-input-panel {
+  padding: 0.6rem;
+  border: solid 2px #6B6B67;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  margin: 0.4rem;
+}
+
+.sub-form-input-label {
+  font-size: 1.4rem;
+}
+
+.sub-form-input {
+  border: solid 2px #6B6B67;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  font-size: 1rem;
 }

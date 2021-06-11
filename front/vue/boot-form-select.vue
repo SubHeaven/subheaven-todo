@@ -2,8 +2,13 @@
     <div :class="panel_class" style="padding: 0;">
         <div class="row sub-form-input-panel">
             <div class="col col-md-12">
-                <label for="name" class="form-label sub-form-input-label">{{label}}</label>
-                <input :type="type" class="form-control sub-form-input" :id="name" :name="name" :placeholder="placeholder" v-model="value">
+                <label for="select" class="form-label sub-form-input-label">{{label}}</label>
+                <select name="select" class="form-select sub-form-input" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
             </div>
         </div>
     </div>
@@ -14,7 +19,7 @@ import smile from './smile.vue'
 export default {
     data () {
         return {
-            value: ''
+            msg: 'Hello world!'
         }
     },
     props: {
@@ -22,16 +27,9 @@ export default {
             type: Number,
             default: 12
         },
-        type: {
-            type: String,
-            default: 'text'
-        },
         name: String,
         label: String,
-        placeholder: {
-            type: String,
-            default: ''
-        }
+        placeholder: String
     },
     computed: {
         panel_class() {
